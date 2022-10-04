@@ -3,4 +3,6 @@
     <string name="enter_email">Enter Email</string>
     <string name="signup">Signup</string>
     <string name="welcome_back">Welcome Back</string>
+    <string name="user_name">User name</string>
+    <string name="enter_password">Enter Password</string>
 </resources>
