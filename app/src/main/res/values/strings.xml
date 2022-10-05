@@ -5,4 +5,14 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="user_name">User name</string>
     <string name="enter_password">Enter Password</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="chats">CHATS</string>
+    <string name="status">STATUS</string>
+    <string name="name1">Name1</string>
+    <string name="name2">Name2</string>
+    <string name="name3">Name3</string>
+    <string name="name4">Name4</string>
+    <string name="name5">Name5</string>
+    <string name="calls">CALLS</string>
+    <string name="image">image</string>
 </resources>
