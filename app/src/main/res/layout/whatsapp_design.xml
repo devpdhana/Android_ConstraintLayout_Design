@@ -1,424 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/green"
     android:id="@+id/layoutMain"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/whatsapp"
-        android:id="@+id/txtWhatsapp"
-        android:textStyle="bold"
-        android:textSize="28sp"
-        android:textColor="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/FirstLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="10dp"
-        />
+        android:background="@color/green">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whatsapp"
+            android:textSize="28sp"
+            android:id="@+id/txtWhatsapp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/Layout2"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_search_24"
+                android:textSize="28sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_chat_24"
+                android:backgroundTint="@color/white"
+                android:textSize="28sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_more_vert_24"
+                android:backgroundTint="@color/white"
+                android:textSize="28sp"
+                />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/txtWhatsapp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/chats"
+                android:id="@+id/txtChats"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/status"
+                android:id="@+id/txtStatus"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/calls"
+                android:id="@+id/txtCalls"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_search_24"
-        android:textSize="28sp"
-        android:id="@+id/txtSearch"
-        app:layout_constraintStart_toEndOf="@+id/txtWhatsapp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="16dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_menu_24"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtSearch"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"/>
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chats"
-        android:textSize="18sp"
-        android:id="@+id/txtChats"
-        app:layout_constraintStart_toStartOf="@id/txtWhatsapp"
-        app:layout_constraintTop_toBottomOf="@id/txtWhatsapp"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/txtWhatsapp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/status"
-        android:id="@+id/txtStatus"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtWhatsapp"
-        app:layout_constraintTop_toBottomOf="@id/txtWhatsapp"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calls"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/txtStatus"
-        app:layout_constraintTop_toBottomOf="@id/txtWhatsapp"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="40dp"
-        />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/white"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/txtChats"
-        app:layout_constraintTop_toBottomOf="@+id/txtChats"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstLayout"
+        android:layout_marginBottom="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <include
+            layout="@layout/chat_layout"
+            />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
+        <include
+            layout="@layout/chat_layout"
+            />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name1"
-                android:textSize="28sp"
-                android:id="@+id/txtName1"
-                android:layout_marginTop="10dp"
-                />
+        <include
+            layout="@layout/chat_layout"
+            />
 
-        </LinearLayout>
+        <include
+            layout="@layout/chat_layout"
+            />
 
+        <include
+            layout="@layout/chat_layout"
+            />
 
+        <include
+            layout="@layout/chat_layout"
+            />
 
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name2"
-                android:textSize="28sp"
-                android:id="@+id/txtName2"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name3"
-                android:textSize="28sp"
-                android:id="@+id/txtName3"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name4"
-                android:textSize="28sp"
-                android:id="@+id/txtName4"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_launcher_background"
-                android:contentDescription="@string/image"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name5"
-                android:textSize="28sp"
-                android:id="@+id/txtName5"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name1"
-                android:textSize="28sp"
-                android:id="@+id/txtName6"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name2"
-                android:textSize="28sp"
-                android:id="@+id/txtName7"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name3"
-                android:textSize="28sp"
-                android:id="@+id/txtName8"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name4"
-                android:textSize="28sp"
-                android:id="@+id/txtName9"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name5"
-                android:textSize="28sp"
-                android:id="@+id/txtName10"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name1"
-                android:textSize="28sp"
-                android:id="@+id/txtName11"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name1"
-                android:textSize="28sp"
-                android:id="@+id/txtName12"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtChats"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/name1"
-                android:textSize="28sp"
-                android:id="@+id/txtName13"
-                android:layout_marginTop="10dp"
-                />
-
-        </LinearLayout>
-
+        <include
+            layout="@layout/chat_layout"
+            />
 
     </LinearLayout>
-
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
