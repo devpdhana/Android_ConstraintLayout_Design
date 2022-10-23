@@ -7,16 +7,13 @@
     android:id="@+id/layoutMain"
     tools:context=".MainActivity">
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/FirstLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/green">
+        android:background="@color/green"
+        android:id="@+id/Tab">
 
         <TextView
             android:layout_width="wrap_content"
@@ -74,129 +71,217 @@
 
         </LinearLayout>
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="40dp"
+            android:id="@+id/TabLayout"
             android:layout_below="@+id/txtWhatsapp"
             android:background="@color/green"
-            android:id="@+id/SecondLayout">
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/white">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/chats"
-                android:id="@+id/txtChats"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/status"
-                android:id="@+id/txtStatus"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/calls"
-                android:id="@+id/txtCalls"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
+        </com.google.android.material.tabs.TabLayout>
     </RelativeLayout>
 
 
     <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tab"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FirstLayout"
-                android:fillViewport="true"
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:id="@+id/Chatlayout"
+                android:visibility="visible"
+                android:orientation="vertical">
 
 
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
-                    <include
-                        layout="@layout/chat_layout"
-                        />
+                <include
+                    layout="@layout/chat_layout"
+                    />
 
 
-                </LinearLayout>
+            </LinearLayout>
 
-            </androidx.core.widget.NestedScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Statuslayout"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+                <include
+                    layout="@layout/status_layout"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Callslayout"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+                <include
+                    layout="@layout/chat_layout"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
