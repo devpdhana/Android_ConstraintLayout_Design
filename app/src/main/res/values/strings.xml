@@ -25,4 +25,13 @@
     <string name="search_for_restarunt">Search for restarunt</string>
     <string name="_111_pillaiyar_kovil_street_n_computer_science">111,Pillaiyar Kovil Street-\n Computer Science</string>
     <string name="pizza_peddler">Pizza Peddler</string>
+
+    <string-array name="Programing_Languages">
+        <item>C</item>
+        <item>C++</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>Kotlin</item>
+        <item>C#</item>
+    </string-array>
 </resources>
