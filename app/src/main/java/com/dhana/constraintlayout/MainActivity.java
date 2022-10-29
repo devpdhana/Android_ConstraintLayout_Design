@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
 import javax.net.ssl.SSLEngineResult;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout linearLayout;
     TabLayout tabLayout;
     LinearLayout ChatLayout;
     LinearLayout StatusLayout;
